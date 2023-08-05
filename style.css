@@ -1,0 +1,80 @@
+body {
+    background-image: linear-gradient(to bottom right, silver, white);
+    display: flex;
+    height: 600px;
+}
+
+.viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 1000px;
+    height: 400px;
+    box-shadow: 3px 0px 10px grey;
+}
+
+.photobox {
+    width: 900px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gray-container {
+    width: 900px;
+    height: 150px;
+    background-color: rgba(14, 14, 14, 0.5);
+    position: relative;
+    top: -103px;    
+}
+
+#photo-title {
+    color: white;
+    margin: 10px 0px 10px 10px;
+    padding: 0;
+    position: relative;
+    top: 0px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+#photo-description {
+    color: lightgray;
+    margin: 20px 0px 20px 10px;
+    padding: 0;
+    position: relative;
+    top: 0px;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 12px;
+}
+
+#photo {
+    object-fit: cover;
+    height: 400px;
+    width: 900x;
+    margin: 0;
+}
+
+button {
+    height: 100%;
+    width: 50px;
+    border-radius: 0%;
+    margin: 0;
+    background-color:rgb(214, 214, 214);
+}   
+
+button:hover {
+    background-color: rgb(233, 232, 232);
+    opacity: 0.4;
+}
+
+#leftarrow {
+    height: 20px;
+    width: 15px;
+}
+
+#rightarrow {
+    height: 20px;
+    width: 15px;
+    transform: rotate(0.5turn);
+}
