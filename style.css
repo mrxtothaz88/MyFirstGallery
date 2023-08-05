@@ -105,9 +105,19 @@ button:hover {
     margin-right: 5px;
     object-fit: cover;
     border: 3px solid rgb(224, 223, 223);
+    box-shadow: 3px 0px 10px grey;
+}   
+
+#thumbnail-photo:active {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    object-fit: cover;
+    border: 5px solid rgb(173, 173, 173);
 }
 
- #thumbnail-titles {
+#thumbnail-titles {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -118,7 +128,7 @@ button:hover {
     margin-right: auto;
     width: 900px;
     height: 10px;
-}
+} 
 
 .thumb-title {
     display: flex;
@@ -138,6 +148,6 @@ button:hover {
     opacity: 0;
 }
 
-#thumbnail:hover .thumb-title {
+ #thumbnail:hover .thumb-title {
     opacity: 1;
 }
