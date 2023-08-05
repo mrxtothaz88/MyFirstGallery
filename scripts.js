@@ -18,17 +18,17 @@ let data = {
     {
     photo: "images/1400-hp-pontiac-firebird-trans-am.jpg",
     title: "Pontiac Firebird",
-    description: "The Pontiac Firebird is an American automobile that was built and produced by Pontiac from the 1967 to 2002 model years."
+    description: "The Pontiac Firebird is an American automobile that was built and produced by Pontiac from the 1967 to 2002 model years. Designed as a pony car to compete with the Ford Mustang, it was introduced on February 23, 1967, five months after GM's Chevrolet division's platform-sharing Camaro."
     },
     {
     photo: "images/1970-plymouth-hemi-cuda_3341.jpg",
     title: "Plymouth Barracuda",
-    description: "The Plymouth Barracuda is a two-door pony car that was manufactured by Chrysler Corporation from 1964 through 1974 model years."
+    description: "The Plymouth Barracuda is a two-door pony car that was manufactured by Chrysler Corporation from 1964 through 1974 model years. The first-generation Barracuda was based on the Chrysler A-body and was offered from 1964 until 1966."
     },
     {
     photo: "images/dodge-challenger-ta-front-three-quarter.jpg",
     title: "Dodge Challenger",
-    description: "The Dodge Challenger is the name of three different generations of automobiles (two of those being pony cars) produced by American automobile manufacturer Dodge."
+    description: "The Dodge Challenger is the name of three different generations of automobiles (two of those being pony cars) produced by American automobile manufacturer Dodge. However, the first use of the Challenger name by Dodge was in 1959 for marketing a 'value version' of the full-sized Coronet Silver Challenger."
     },
     {
     photo: "images/fb88c644.png",
@@ -52,6 +52,16 @@ let data = {
     }
   ]
   
-  $("#photo").attr("src", imagesData[currentPhoto].photo);
+  //$("#photo").attr("src", imagesData[currentPhoto].photo);
 
+  let loadPhoto = (photoNumber) => {
+    $('#photo').attr('src', imagesData[photoNumber].photo);
+    $("#photo-title").empty().append(imagesData[photoNumber].title);
+    $("#photo-description").empty().append(imagesData[photoNumber].description);
+  }
+    loadPhoto(currentPhoto);
   
+  $('#toRight').click(() => {
+    currentPhoto++;
+    loadPhoto(currentPhoto);
+  })

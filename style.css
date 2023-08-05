@@ -24,14 +24,19 @@ body {
 .gray-container {
     width: 900px;
     height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     background-color: rgba(14, 14, 14, 0.5);
     position: relative;
-    top: -103px;    
+    top: -106px;  
+    padding-top: 5px;
+    padding-bottom: 20px; 
 }
 
 #photo-title {
     color: white;
-    margin: 10px 0px 10px 10px;
+    margin: 0px 10px 15px 5px;
     padding: 0;
     position: relative;
     top: 0px;
@@ -40,10 +45,9 @@ body {
 
 #photo-description {
     color: lightgray;
-    margin: 20px 0px 20px 10px;
+    margin: 0px 10px auto 10px;
     padding: 0;
     position: relative;
-    top: 0px;
     font-family: 'Exo 2', sans-serif;
     font-size: 12px;
 }
