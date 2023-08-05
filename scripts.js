@@ -63,6 +63,13 @@ let currentPhoto = 0;
     else {currentPhoto = imagesData.length;
     }
     loadPhoto(currentPhoto);
-  })
-
+  });
   
+  let newArr = imagesData.map(getPhoto);
+  function getPhoto(item) {
+    return [item.photo];
+  }
+  newArr.forEach (item => {
+     $("#thumbnail").append('<img id="thumbnail-photo">');
+     $("#thumbnail-photo:last-of-type").attr('src', item);
+   });
