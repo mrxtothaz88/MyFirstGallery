@@ -70,7 +70,7 @@ let currentPhoto = 0;
     return [item.photo];
   }
   newArr.forEach ((item, index) => {
-     $("#thumbnail").append(`<img id="thumbnail-photo" data-index=${index}>`);
+     $("#thumbnail").append(`<img id="thumbnail-photo" data-index="${index}">`);
      $("#thumbnail-photo:last-of-type").attr('src', item);
    });
 
@@ -78,7 +78,13 @@ let currentPhoto = 0;
     let indexClicked = $(event.target).attr('data-index');
     let numberIndex = parseInt(indexClicked);
     //console.log(numberIndex);
-    //$('#clicked').text(data[indexClicked]);
     loadPhoto(numberIndex);
   });
   
+  let newArrTitle = imagesData.map(getTitle);
+  function getTitle(item) {
+    return [item.title];
+  }
+  newArrTitle.forEach ((item, index) => {
+     $("#thumbnail-titles").append(`<div class="thumb-title" data-index="${index}">${item}</div>`);
+   });
