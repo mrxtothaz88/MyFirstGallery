@@ -12,7 +12,9 @@ let data = {
  */ 
 
 
-  let data = [
+  let currentPhoto = 0;
+
+  let imagesData = [
     {
     photo: "images/1400-hp-pontiac-firebird-trans-am.jpg",
     title: "Pontiac Firebird",
@@ -49,4 +51,7 @@ let data = {
     description: "The Chevrolet Chevelle is a mid-sized automobile that was produced by Chevrolet in three generations for the 1964 through 1978 model years. Part of the General Motors (GM) A-body platform, the Chevelle was one of Chevrolet's most successful nameplates."
     }
   ]
+  
+  $("#photo").attr("src", imagesData[currentPhoto].photo);
 
+  
