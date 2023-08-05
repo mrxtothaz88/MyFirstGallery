@@ -1,18 +1,4 @@
-/*
-let data = {
-    photo: "images/1400-hp-pontiac-firebird-trans-am.jpg",
-    title: "Pontiac Firebird",
-    description: "The Pontiac Firebird is an American automobile that was built and produced by Pontiac from the 1967 to 2002 model years."
-  }
-  ;
-  
-  $("#photo").attr("src", data.photo);
-  $("#photo-title").append(data.title);
-  $("#photo-description").append(data.description);
- */ 
-
-
-  let currentPhoto = 0;
+let currentPhoto = 0;
 
   let imagesData = [
     {
@@ -78,3 +64,5 @@ let data = {
     }
     loadPhoto(currentPhoto);
   })
+
+  
