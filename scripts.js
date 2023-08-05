@@ -69,7 +69,16 @@ let currentPhoto = 0;
   function getPhoto(item) {
     return [item.photo];
   }
-  newArr.forEach (item => {
-     $("#thumbnail").append('<img id="thumbnail-photo">');
+  newArr.forEach ((item, index) => {
+     $("#thumbnail").append(`<img id="thumbnail-photo" data-index=${index}>`);
      $("#thumbnail-photo:last-of-type").attr('src', item);
    });
+
+   $('#thumbnail').click((event) => {
+    let indexClicked = $(event.target).attr('data-index');
+    let numberIndex = parseInt(indexClicked);
+    //console.log(numberIndex);
+    //$('#clicked').text(data[indexClicked]);
+    loadPhoto(numberIndex);
+  });
+  
