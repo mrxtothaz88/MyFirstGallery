@@ -62,6 +62,19 @@ let data = {
     loadPhoto(currentPhoto);
   
   $('#toRight').click(() => {
+    if(currentPhoto < imagesData.length) {
     currentPhoto++;
+    }
+    else {currentPhoto = 0;
+    }
+    loadPhoto(currentPhoto);
+  })
+
+  $('#toLeft').click(() => {
+    if(currentPhoto >= 1) {
+    currentPhoto--;
+    }
+    else {currentPhoto = imagesData.length;
+    }
     loadPhoto(currentPhoto);
   })
